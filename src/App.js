@@ -9,7 +9,6 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 //4-importamos y randerizamos nuestro Provider
 import CartContextProvider from "./context/cartContext";
 
-
 function App() {
   return (
     <CartContextProvider>

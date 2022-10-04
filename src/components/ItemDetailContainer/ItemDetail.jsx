@@ -7,7 +7,6 @@ function ItemDetail ({ data }) {
 
     // conectarnos al context con el hook useContext
     const { addItem } = useContext(cartCtx);
-
     const [estadoCart, setEstadoCart] = useState(true)
 
     function handleAddToCart (count) {
@@ -32,7 +31,6 @@ function ItemDetail ({ data }) {
                         onAddToCart={handleAddToCart}/>
                          : <Link to='/cart'> Finalizar compra</Link>
                     }
-
                     <p>{data.descripcion}</p>
                 </div>
             </div>
