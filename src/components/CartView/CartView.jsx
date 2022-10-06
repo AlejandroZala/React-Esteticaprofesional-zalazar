@@ -3,6 +3,7 @@ import { cartCtx } from "../../context/cartContext";
 
 
 function CartView() {
+  const {getItemPrice} = useContext(cartCtx);
 
   // saco la info del context
   const context = useContext(cartCtx);
@@ -19,13 +20,18 @@ if (carroVacio) {
 
   return (
     <div>
+      <h3>Tu carrito de compras</h3>
       {cart.map((data) => (
         <div>
-          <h3>{data.nombre}</h3>
-          <p>{data.precio}</p>
-          <p>{data.count}</p>
+
+          <h4>{data.nombre}</h4>
+          <p>Precio unitario: ${data.precio}</p>
+          <p>{data.count} unidades</p>
+          <h4>Total: ${ data.precio * data.count }</h4>
+         
         </div>
       ))}
+      <h3>Total de la compra: ${ getItemPrice() }</h3>
     </div>
   )
 }

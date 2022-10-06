@@ -41,7 +41,7 @@ const Miprovider = ({ children }) => {
         return cart.reduce((acc, x) => acc += x.count, 0)
     }
     const getItemPrice = () => {
-        return cart.reduce((acc, x) => acc += x.price * x.count, 0)
+        return cart.reduce((acc, x) => acc += x.precio * x.count, 0)
     }
 
     return <Provider value={{cart, isIncart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice}}>{children}</Provider>
