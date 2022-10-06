@@ -6,12 +6,12 @@ const Miprovider = ({ children }) => {
 
     const [cart, setCart] = useState([])
 
-    //metodo some = indica si el producto agregado al carro ya existe o no en cart
     // retorna true o false si el producto esta en el carro
+    // usa metodo some: indica si el producto agregado al carro ya existe o no en cart
     const isIncart = (id) => {
         return cart.some(x => x.id === id)
     }
-
+ 
     //funcion que se vincula con handleAddToCart de ItemDetail y en ella con ItemCount > botton onclick
     //Agrega producto al carro sin pisar productos existentes
     const addItem = (data, count) => {
@@ -25,10 +25,10 @@ const Miprovider = ({ children }) => {
             setCart(auxArray)
 
         } else {
-            setCart([...cart, newItem]) 
+            setCart([...cart, newItem])         //agrega el nuevo producto no repetido
         }
     }
-    //Borra todos los productos del carrito - asigno a un boton que indique el vaciado del carro
+    //Vacio todos los productos del carrito - asigno a un boton que indique el vaciado del carro
     const emptyCart = () => {
         return setCart([])
     }

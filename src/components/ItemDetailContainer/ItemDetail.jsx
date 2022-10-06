@@ -1,20 +1,22 @@
 import React, { useState, useContext } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import {Link} from 'react-router-dom';
+// importamos el contexto cartCtx
 import { cartCtx } from "../../context/cartContext";
 
 function ItemDetail ({ data }) {
 
     // conectarnos al context con el hook useContext
     const { addItem } = useContext(cartCtx);
+    
+    //creo estado switch para detectar producto seleccionado
     const [estadoCart, setEstadoCart] = useState(true)
-
     function handleAddToCart (count) {
-        // alert(`agregaste al carrito ${count} productos`)
-        addItem(data, count);
-        setEstadoCart(false)
+        addItem(data, count);           //mando el item y la cantidad al context
+        setEstadoCart(false)            //cambio el estado a false
     }
 
+    // uso operador ternario segun estadoCart
     return (
         <div className="detalleItem">
             <img src={data.img} alt="" />
@@ -29,7 +31,7 @@ function ItemDetail ({ data }) {
                         valorMin={1} 
                         valorMax={data.stock} 
                         onAddToCart={handleAddToCart}/>
-                         : <Link to='/cart'> Finalizar compra</Link>
+                         : <Link to='/cart'> Ir al Carrito</Link>
                     }
                     <p>{data.descripcion}</p>
                 </div>

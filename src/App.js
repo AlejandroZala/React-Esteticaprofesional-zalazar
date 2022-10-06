@@ -8,6 +8,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 //4-importamos y randerizamos nuestro Provider
 import CartContextProvider from "./context/cartContext";
+import CartView from "./components/CartView/CartView";
 
 function App() {
   return (
@@ -22,8 +23,7 @@ function App() {
                 <ItemDetailContainer/>}/>
               <Route path="/categoria/:cat" element={
                 <ItemListContainer/>}/>
-              <Route path="/cart" element={
-                <h2> Pagina en desarrollo</h2>}/>
+              <Route path="/cart" element={<CartView/>}/>
               <Route path="*" element={
                 <h2> 404: No existe link</h2>}></Route>
           </Routes>
