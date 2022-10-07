@@ -39,5 +39,4 @@ function ItemDetail ({ data }) {
         </div>
     )
 }
-
 export default ItemDetail

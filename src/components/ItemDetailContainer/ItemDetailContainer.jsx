@@ -10,7 +10,6 @@ function ItemDetailContainer() {
   const { id } = useParams();
   const [ loading, setLoading] = useState(true);
 
-
   // Llamo a una promesa
   useEffect(() => {
     getSingleItem(id)

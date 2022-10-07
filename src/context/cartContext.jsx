@@ -3,9 +3,7 @@ import React, {useState, createContext} from "react";
 export const cartCtx = createContext()
 const { Provider } = cartCtx
 const Miprovider = ({ children }) => {
-
     const [cart, setCart] = useState([])
-
     // retorna true o false si el producto esta en el carro
     // usa metodo some: indica si el producto agregado al carro ya existe o no en cart
     const isIncart = (id) => {
@@ -16,14 +14,12 @@ const Miprovider = ({ children }) => {
     //Agrega producto al carro sin pisar productos existentes
     const addItem = (data, count) => {
         const newItem = {...data, count}            //creo objeto unificando contenidos
-
         if (isIncart(newItem.id)){
             const findProduct = cart.find(x =>x.id === newItem.id)  //encuentra el producto repetido
             const productIndex = cart.indexOf(findProduct)          //encuentra el indice del prod
             const auxArray = [...cart]              //copio cart
             auxArray[productIndex].count += count   //accedo al indice y acumula las cantidades
             setCart(auxArray)
-
         } else {
             setCart([...cart, newItem])         //agrega el nuevo producto no repetido
         }
@@ -44,7 +40,10 @@ const Miprovider = ({ children }) => {
         return cart.reduce((acc, x) => acc += x.precio * x.count, 0)
     }
 
-    return <Provider value={{cart, isIncart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice}}>{children}</Provider>
+    return <Provider 
+        value={{cart, isIncart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice}}>
+            {children}
+        </Provider>
 }
 
 export default Miprovider
