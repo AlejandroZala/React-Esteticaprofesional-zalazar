@@ -9,7 +9,6 @@ function ItemCount({valorMin, valorMax, onAddToCart}) {
         setCount(count + 1);
     }
   }
-
   function handleResta() {
     if (count > valorMin) {
         setCount(count - 1);
