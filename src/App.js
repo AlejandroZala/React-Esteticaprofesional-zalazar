@@ -9,8 +9,12 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 //4-importamos y randerizamos nuestro Provider
 import CartContextProvider from "./context/cartContext";
 import CartView from "./components/CartView/CartView";
+//Hago import de la app de firebase
+import firestore from "./services/firestore";
 
 function App() {
+  console.log("Firestore:", firestore) //Veo si en consola tengo conexxion con firebase
+
   return (
     <CartContextProvider>
       <BrowserRouter>
