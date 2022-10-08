@@ -1,6 +1,6 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
 import ItemListContainer from './components/Producto/ItemListContainer';
