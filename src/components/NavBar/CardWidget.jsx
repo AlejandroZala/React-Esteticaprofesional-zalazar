@@ -12,7 +12,7 @@ function CardWidget() {
         <div>
             <img src="/imagenes/carrito.png" className="widget" alt="logoCarrito" />
         </div>
-        <span>{getItemQty()}</span>
+        <span>{getItemQty() > 0 && getItemQty()}</span>
     </div>
   )
 }

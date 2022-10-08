@@ -6,14 +6,16 @@ import "./itemDetail.css";
 import Loading from "../Loading/Loading.jsx";
 
 function ItemDetailContainer() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({}); //Objeto vacio
   const { id } = useParams();
   const [ loading, setLoading] = useState(true);
 
+  // Llamo a una promesa
   useEffect(() => {
-    getSingleItem(id).then((respuestaDatos) => {
-      setData(respuestaDatos)
-      setLoading(false)
+    getSingleItem(id)
+      .then((respuestaDatos) => {
+          setData(respuestaDatos)
+          setLoading(false)
     });
   }, [id]);
 
