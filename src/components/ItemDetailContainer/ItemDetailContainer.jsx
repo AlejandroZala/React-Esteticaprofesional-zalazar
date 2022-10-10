@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from './ItemDetail';
-import { getSingleItem } from "../../services/mockApi";
+import { getSingleItem } from "../../services/firestore";
 import { useParams } from "react-router-dom";
 import "./itemDetail.css";
 import Loading from "../Loading/Loading.jsx";
@@ -16,7 +16,7 @@ function ItemDetailContainer() {
       .then((respuestaDatos) => {
           setData(respuestaDatos)
           setLoading(false)
-    });
+      });
   }, [id]);
 
   return (

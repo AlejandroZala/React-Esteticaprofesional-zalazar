@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-import getItems, {getItemsByCategory} from "../../services/mockApi";
+import {getItems} from "../../services/firestore";
 import Loading from "../Loading/Loading.jsx";
 
 function ItemListContainer(props) {
@@ -12,19 +12,20 @@ function ItemListContainer(props) {
 
   useEffect(() => {
     if (cat === undefined){
+      console.log("--->", getItems());
       getItems()
         .then((respuestaDatos) => {
           setData(respuestaDatos)
           setLoading(false)
       })
     }
-    else {
-      getItemsByCategory(cat)
-        .then((respuestaDatos) => {
-          setData(respuestaDatos)
-          setLoading(false)
-      })
-    }
+    // else {
+    //   getItemsByCategory(cat)
+    //     .then((respuestaDatos) => {
+    //       setData(respuestaDatos)
+    //       setLoading(false)
+    //   })
+    // }
   }, [cat]);
 
   return (
