@@ -8,6 +8,7 @@ import Loading from "../Loading/Loading.jsx";
 function ItemDetailContainer() {
   const [data, setData] = useState({}); //Objeto vacio
   const { id } = useParams();
+  const [error, setError] = useState(false);
   const [ loading, setLoading] = useState(true);
 
   // Llamo a una promesa
@@ -15,9 +16,15 @@ function ItemDetailContainer() {
     getSingleItem(id)
       .then((respuestaDatos) => {
           setData(respuestaDatos)
-          setLoading(false)
-      });
+          // setLoading(false)
+      })
+      .catch ((errormsg) => {
+        setError(errormsg.message)
+      })
+      .finally(() => setLoading(false))
   }, [id]);
+  // console.log("--->", getSingleItem(id));
+
 
   return (
     <div>
