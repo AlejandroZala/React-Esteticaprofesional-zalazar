@@ -23,7 +23,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore (app);
-// creo funcion getItems
+
 export async function getItems(){
   const colleccionRef = collection(firestore, "productos");
   let snapshotBD = await getDocs(colleccionRef);
