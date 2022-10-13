@@ -12,7 +12,6 @@ function ItemListContainer(props) {
 
   useEffect(() => {
     if (cat === undefined){
-      // console.log("--->", getItems());
       getItems()
         .then((respuestaDatos) => {
           setData(respuestaDatos)

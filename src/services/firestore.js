@@ -32,16 +32,20 @@ export async function getItems(){
     let docFormateado = {...documento.data(), id: documento.id}
     return docFormateado;
   });
+
   return dataDocs;
 }
+
 export async function getSingleItem(idParams){
-  const docRef = doc(firestore, "productos", idParams);
-  const docSnapshot = await getDoc(docRef);
-  
-  console.log("Document data:", docSnapshot.data());
-  
-  return { ...docSnapshot.data(), id: docSnapshot.id}
+  try {
+    const docRef = doc(firestore, "productos", idParams);
+    const docSnapshot = await getDoc(docRef);
+    return { ...docSnapshot.data(), id: docSnapshot.id };
+  } catch (error) {
+    console.error(error);
+  }
 }
+
 export async function getItemsByCategory(catParams){
   const colleccionRef = collection(firestore, "productos");
   const queryCategory = query(
@@ -51,6 +55,7 @@ export async function getItemsByCategory(catParams){
   
   let dataDocs = respuesta.docs.map( documento => {
     let docFormateado = {...documento.data(), id: documento.id}
+
     return docFormateado;
   });
 
