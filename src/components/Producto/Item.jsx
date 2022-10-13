@@ -6,7 +6,7 @@ import "./item.css";
 
 function Item(props) {
   let { precio, nombre, img, descripcion, stock, id } = props;
-  const urlDetalle = `/detalle/${id}-${nombre}`;
+  const urlDetalle = `/detalle/${id}`;
 
   return (
     <div className="item">

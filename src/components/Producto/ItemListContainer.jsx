@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-import getItems, {getItemsByCategory} from "../../services/mockApi";
+import {getItems, getItemsByCategory} from "../../services/firestore";
 import Loading from "../Loading/Loading.jsx";
 
 function ItemListContainer(props) {
