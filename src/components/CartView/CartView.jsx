@@ -1,13 +1,16 @@
 import React, {useContext} from 'react';
 import { cartCtx } from "../../context/cartContext";
+import { createBuyOrder } from '../../services/firestore';
 import Button from "../Button/Button";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./cartView.css";
 
 function CartView() {
   const {deleteItem} = useContext(cartCtx);
   const {getItemPrice} = useContext(cartCtx);
   const {getItemQty} = useContext(cartCtx);
+  // llamo al hook navigate
+  const navigate = useNavigate();
   // saco la info del context
   const context = useContext(cartCtx);
   // hago destractury del context y obtengo cart
@@ -25,6 +28,24 @@ function CartView() {
       </div>
     )
   }
+
+  //preparo función con el objeto Orden de compra (datos comprador y productos)
+  //la cual la llamo al apretar el boton finalizar compra
+  function handleCheckout(){
+    const orderData = {
+      buyer: {
+        name: "Alejandro",
+        phone: "223111222",
+        email: "ale123@hotmail.com"
+      },
+      items: cart,
+      total: getItemPrice(),
+    };
+    createBuyOrder(orderData).then( orderId => {
+      navigate(`/checkout/${orderId}`)
+    });
+  }
+
     return (
       <section className="container">
         <div className="cajaTituloCarrito">
@@ -50,7 +71,7 @@ function CartView() {
         </table>
         <div>
           <h3>Total de la compra: ${ getItemPrice() }</h3>
-          <button className="btnComprar">Finalizar compra</button>
+          <button onClick={handleCheckout} className="btnComprar">Finalizar compra</button>
         </div>
       </section>
     )

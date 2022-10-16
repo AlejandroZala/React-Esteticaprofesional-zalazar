@@ -7,7 +7,9 @@ import {
   doc, 
   getDoc, 
   query, 
-  where
+  where,
+  addDoc,
+  setDoc
 } from "firebase/firestore";
 
 // Your web app's Firebase configuration
@@ -62,4 +64,15 @@ export async function getItemsByCategory(catParams){
   return dataDocs;
 }
 
+export async function createBuyOrder(orderData){
+  // console.log(orderData);
+
+  const collectionRef = collection(firestore, "orders");
+  let respuesta = await addDoc(collectionRef, orderData);
+  // console.log (respuesta.id);
+
+  return respuesta.id;
+
+
+}
 export default firestore;
