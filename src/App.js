@@ -10,12 +10,14 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import CartContextProvider from "./context/cartContext";
 import CartView from "./components/CartView/CartView";
 import Checkout from "./components/Checkout/Checkout";
+// import { exportDataTofirestore } from "./services/firestore";
 //Hago import de la app de firebase
 
 function App() {
 
   return (
     <CartContextProvider>
+      {/* <button onClick={exportDataTofirestore}>Enviar datos a firestore</button> */}
       <BrowserRouter>
           <Header/>
           <Navbar/>
