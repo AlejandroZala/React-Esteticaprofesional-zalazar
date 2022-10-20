@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { cartCtx } from "../../context/cartContext";
 import { createBuyOrder } from "../../services/firestore";
+import "./checkoutForm.css";
 
 function CheckoutForm() {
   //crep estado para guardar los datos ingresados
@@ -43,48 +44,52 @@ function CheckoutForm() {
 
   return (
     <div className="form-container">
-      <form onSubmit={handleCheckout}>
-        <div className="form-item">
-          <label htmlFor="name">Nombre</label>
-          <input
-            value={dataForm.name}
-            onChange={inputChangeHandler}
-            name="name"
-            type="text"
-            placeholder="Nombre"
-            required
-          />
-        </div>
+        <h4>Ingrese sus datos</h4>
+        <form onSubmit={handleCheckout}>
+            <div className="form-group">
+            <label htmlFor="name">Nombre y Apellido</label>
+            <input
+                className="form-control"
+                value={dataForm.name}
+                onChange={inputChangeHandler}
+                name="name"
+                type="text"
+                placeholder="Nombre"
+                required
+            />
+            </div>
 
-        <div className="form-item">
-          <label htmlFor="telefono">Telefono</label>
-          <input
-            value={dataForm.phone}
-            onChange={inputChangeHandler}
-            name="phone"
-            type="text"
-            placeholder="Telefono"
-            required
-          />
-        </div>
+            <div className="form-group">
+            <label htmlFor="telefono">Telefono</label>
+            <input
+                className="form-control"
+                value={dataForm.phone}
+                onChange={inputChangeHandler}
+                name="phone"
+                type="text"
+                placeholder="Telefono"
+                required
+            />
+            </div>
 
-        <div className="form-item">
-          <label htmlFor="email">Email</label>
-          <input
-            value={dataForm.email}
-            onChange={inputChangeHandler}
-            name="email"
-            type="text"
-            placeholder="Correo"
-            required
-          />
+            <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+                className="form-control"
+                value={dataForm.email}
+                onChange={inputChangeHandler}
+                name="email"
+                type="text"
+                placeholder="Correo"
+                required
+            />
+            </div>
+            <button onClick={handleCheckout} type="submit" className="btnComprar">
+            Finalizar compra
+            </button>
+        </form>
         </div>
-        <button onClick={handleCheckout} type="submit" className="btnComprar">
-          Finalizar compra
-        </button>
-      </form>
-    </div>
-  );
+    );
 }
 
 export default CheckoutForm;
