@@ -23,7 +23,8 @@ function ItemDetail ({ data }) {
             <div className="cajaDetalleItem">
                 <h1>{data.nombre}</h1>
                 <div className="cajaPrecioStockDetalle">
-                    <h2>${data.precio}</h2>
+                    <p>{data.detalleFull}</p>
+                    <h2>Precio: ${data.precio}</h2>
                     <p>Stock disponible: {data.stock} unidades</p>
 
                     {estadoCart ? 
@@ -33,7 +34,7 @@ function ItemDetail ({ data }) {
                         onAddToCart={handleAddToCart}/>
                          : <Link to='/cart'> Ir al Carrito</Link>
                     }
-                    <p>{data.descripcion}</p>
+
                 </div>
             </div>
         </div>
