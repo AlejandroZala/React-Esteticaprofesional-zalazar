@@ -9,6 +9,9 @@
     list-style: none;
     flex-direction: row;
 }
+.NavToggler {
+    background-color: rgb(155, 222, 135);
+}
 
 ul li{
     display: flex;

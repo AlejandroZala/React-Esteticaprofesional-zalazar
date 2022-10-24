@@ -3,6 +3,7 @@ import React from "react";
 import './App.css';
 import Navbar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
+import Footer from "./components/Footer/Footer";
 import ItemListContainer from './components/Producto/ItemListContainer';
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
@@ -33,6 +34,7 @@ function App() {
               <Route path="*" element={
                 <h2> 404: No existe link</h2>}></Route>
           </Routes>
+          <Footer />
       </BrowserRouter>
     </CartContextProvider>
   );
