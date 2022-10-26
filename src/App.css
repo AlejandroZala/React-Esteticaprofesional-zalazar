@@ -3,9 +3,7 @@
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-
 }
-
 .main{
   margin: 15px auto;
   display: flex;
@@ -14,5 +12,3 @@
   flex-wrap: wrap;
   align-items: center;
 }
-
-

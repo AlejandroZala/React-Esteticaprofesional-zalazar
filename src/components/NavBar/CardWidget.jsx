@@ -5,8 +5,6 @@ import { cartCtx } from "../../context/cartContext";
 function CardWidget() {
   const {getItemQty} = useContext(cartCtx);
 
-  // console.log(`cantidad de productos en carro: ${get}`);
-
   return (
     <div className="contenedorWidget">
         <div>

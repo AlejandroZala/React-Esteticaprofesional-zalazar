@@ -5,21 +5,15 @@ import { createBuyOrder } from "../../services/firestore";
 import "./checkoutForm.css";
 
 function CheckoutForm() {
-  //crep estado para guardar los datos ingresados
   const [dataForm, setDataForm] = useState({
     name: "",
     phone: "",
     email: "",
   });
-  // llamo al hook navigate
   const navigate = useNavigate();
-  // saco la info del context
   const context = useContext(cartCtx);
-  // hago destractury del context y obtengo cart
   const { cart, getItemPrice } = context;
 
-  //preparo función con el objeto Orden de compra (datos comprador y productos)
-  //la cual la llamo al apretar el boton finalizar compra
   function handleCheckout(event) {
     event.preventDefault();
     const orderData = {
@@ -44,7 +38,10 @@ function CheckoutForm() {
 
   return (
     <div className="form-container">
+      <div className="cajaTituloForm">
         <h4>Ingrese sus datos</h4>
+      </div>
+        
         <form onSubmit={handleCheckout}>
             <div className="form-group">
             <label htmlFor="name">Nombre y Apellido</label>
@@ -54,7 +51,7 @@ function CheckoutForm() {
                 onChange={inputChangeHandler}
                 name="name"
                 type="text"
-                placeholder="Nombre"
+                placeholder="Nombre y apellido"
                 required
             />
             </div>
@@ -66,7 +63,7 @@ function CheckoutForm() {
                 value={dataForm.phone}
                 onChange={inputChangeHandler}
                 name="phone"
-                type="text"
+                type="tel"
                 placeholder="Telefono"
                 required
             />
@@ -79,7 +76,7 @@ function CheckoutForm() {
                 value={dataForm.email}
                 onChange={inputChangeHandler}
                 name="email"
-                type="text"
+                type="email"
                 placeholder="Correo"
                 required
             />

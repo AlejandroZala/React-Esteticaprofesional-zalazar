@@ -13,7 +13,7 @@ function Footer() {
         <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
         <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
             <div className="me-5 d-none d-lg-block">
-            <span>NUESTRAS REDES SOCIALES:</span>
+            <span className="fw-bold">NUESTRAS REDES SOCIALES:</span>
             </div>
 
             <div>
@@ -47,9 +47,10 @@ function Footer() {
                     MGZ-Estética Profesional
                 </h6>
                 <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                    Tu belleza y salud es lo que más nos importa.
+                    Te ofrecemos la mejor atención y toda nuestra experiencia
+                    para que recibas el mejor tratamiento.
+                    Contamos con una amplia linea de productos de cosmética natural para tu cuerpo.
                 </p>
                 </MDBCol>
 
@@ -100,7 +101,7 @@ function Footer() {
             style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
         >
             © 2022 Copyright:
-            <a className="text-reset fw-bold">MGZ-Estética Profesional</a>
+            <p className="text-reset fw-bold">MGZ-Estética Profesional</p>
         </div>
         </MDBFooter>
     );

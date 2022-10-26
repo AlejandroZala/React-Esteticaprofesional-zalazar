@@ -6,11 +6,10 @@ import "./itemDetail.css";
 import Loading from "../Loading/Loading.jsx";
 
 function ItemDetailContainer() {
-  const [data, setData] = useState({}); //Objeto vacio
+  const [data, setData] = useState({});
   const [ loading, setLoading] = useState(true);
   const { id } = useParams();
 
-  // Llamo a una promesa
   useEffect(() => {
     getSingleItem(id)
       .then((respuestaDatos) => {

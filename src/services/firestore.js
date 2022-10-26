@@ -1,7 +1,4 @@
-// Import the functions you need from the SDKs you need
-import {
-  initializeApp
-} from "firebase/app";
+import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   collection,
@@ -13,8 +10,6 @@ import {
   addDoc
 } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-// oBJETO CON DATOS DE LA APLICACION (OCULTAR SI EL PROYECTO ES COMERCIAL)
 const firebaseConfig = {
   apiKey: "AIzaSyBdPkUW1E-Ua8NoFfC7Qi0pB4mEddVxzWA",
   authDomain: "reactcoderzala.firebaseapp.com",
@@ -23,7 +18,7 @@ const firebaseConfig = {
   messagingSenderId: "578724664336",
   appId: "1:578724664336:web:b99941bfe2f8075bc86695"
 };
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 
@@ -75,11 +70,9 @@ export async function getItemsByCategory(catParams) {
 }
 
 export async function createBuyOrder(orderData) {
-  // console.log(orderData);
 
   const collectionRef = collection(firestore, "orders");
   let respuesta = await addDoc(collectionRef, orderData);
-  // console.log (respuesta.id);
 
   return respuesta.id;
 }
@@ -152,7 +145,6 @@ export async function exportDataTofirestore() {
   for (let item of data) {
     delete item.id;
     const newDoc = await addDoc(collectionRef, item);
-    console.log("Doc creado", newDoc.id)
   }
 }
 
