@@ -5,7 +5,6 @@ function Button(props) {
   const [color, setColor] = useState("rgb(108, 204, 79)");
 
   function handleClick() {
-    // props.onClick();
     setColor(props.color);
   }
 

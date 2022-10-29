@@ -6,14 +6,10 @@ import "./cartView.css";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 function CartView() {
-  // saco la info del context
   const context = useContext(cartCtx);
-  // hago destractury del context y obtengo cart
   const { cart, getItemPrice, getItemQty, deleteItem } = context;
-
-  // preparo variable para render condicional
   const carroVacio = getItemQty();
-  //ver de poner algun operador ternario adecuado
+  
   if (carroVacio === 0) {
     return (
       <div>

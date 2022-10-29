@@ -5,7 +5,6 @@ import {getItems, getItemsByCategory} from "../../services/firestore";
 import Loading from "../Loading/Loading.jsx";
 
 function ItemListContainer(props) {
-
   const [data, setData] = useState([]);
   const {cat} = useParams();
   const [ loading, setLoading] = useState(true);

@@ -1,0 +1,6 @@
+.cajaTituloForm{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+}

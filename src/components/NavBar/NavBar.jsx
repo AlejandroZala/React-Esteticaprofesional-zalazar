@@ -25,7 +25,7 @@ function NavBar() {
             </ul>
             <CardWidget/>
         </nav>
-        
     );
 }
+
 export default NavBar;
