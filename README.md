@@ -10,7 +10,7 @@ Para ello utlizamos el paquete de librerías de JavaScript: [Create React App](h
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ## Como base de datos:
-![firestore](https://www.google.com/search?q=image+badge+firestore&tbm=isch&hl=es-419&bih=634&biw=1223&sa=X&ved=2ahUKEwiI7IbF24_7AhWxq5UCHY9JB0IQ3VYoAHoECAEQJA)
+![firestore](https://www.gstatic.com/devrel-devsite/prod/vab7ee6e3641f10848d404faa598f256587df1a361a1e70cd114230c2961b73d9/firebase/images/lockup.svg)
 
 ## Available Scripts
 
