@@ -4,13 +4,14 @@ Mi proyecto fue realizado durante un curso de React JS
 
 Para ello utlizamos el paquete de librerías de JavaScript: [Create React App](https://github.com/facebook/create-react-app).
 
-Además utilicé:
-[HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-[CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-[JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+## Además utilicé:
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-Como base de datos:
-![firestore](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVL19wkV0gEGSO0s-pQvcdv4hu8JriZQQjTw&usqp=CAU)
+## Como base de datos:
+![firestore](https://www.google.com/search?q=image+badge+firestore&tbm=isch&hl=es-419&bih=634&biw=1223&sa=X&ved=2ahUKEwiI7IbF24_7AhWxq5UCHY9JB0IQ3VYoAHoECAEQJA)
+
 ## Available Scripts
 
 In the project directory, you can run:
