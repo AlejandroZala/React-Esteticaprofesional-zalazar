@@ -33,9 +33,7 @@ Bootstrap, mdb-react-ui-kit y fortawesome para mejorar los estilos.
 
     https://react-esteticaprofesional-zalazar.netlify.app
 
-## Video demostrativo de la App
-
-
+<!-- ## Video demostrativo de la App -->
 
 ## Información de interés:
 
