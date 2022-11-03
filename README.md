@@ -2,9 +2,9 @@
 
 Mi proyecto fue realizado durante un curso de React JS
 
-Para ello utlizamos el paquete de librerías de JavaScript: [Create React App](https://github.com/facebook/create-react-app).
+Utilice el paquete de librerías de JavaScript: [Create React App](https://github.com/facebook/create-react-app).
 
-## Además utilicé:
+## Herramientas usadas para el desarrollo:
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -12,69 +12,34 @@ Para ello utlizamos el paquete de librerías de JavaScript: [Create React App](h
 ## Como base de datos:
 ![firestore](https://www.gstatic.com/devrel-devsite/prod/vab7ee6e3641f10848d404faa598f256587df1a361a1e70cd114230c2961b73d9/firebase/images/lockup.svg)
 
-## Available Scripts
+## Librerías y hooks de React:
+React router, useState, useParams, useEffect
 
-In the project directory, you can run:
+## Librerías externas:
+Bootstrap, mdb-react-ui-kit y fortawesome para mejorar los estilos.
+ 
+## Instalación y ejecución desde Visual Studio:
 
-### `npm start`
+    1) Clonar el repositorio de github:
+        git clone https://github.com/AlejandroZala/React-Esteticaprofesional-zalazar.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    2) Instalar el paquete NPM:
+        npm isntall
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    3) Ejecute la aplicación:
+        npm start
 
-### `npm test`
+## Ejecucion de la App desde el deploy de Netlify:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    https://react-esteticaprofesional-zalazar.netlify.app
 
-### `npm run build`
+## Video demostrativo de la App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Información de interés:
 
-### `npm run eject`
+- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [React documentation](https://reactjs.org/).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
