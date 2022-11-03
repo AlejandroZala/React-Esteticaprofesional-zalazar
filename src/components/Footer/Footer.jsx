@@ -12,11 +12,11 @@ function Footer() {
     return (
         <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
         <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <div className="me-5 d-none d-lg-block">
+            {/* <div className="me-5 d-none d-lg-block">
             <span className="fw-bold">NUESTRAS REDES SOCIALES:</span>
-            </div>
+            </div> */}
 
-            <div>
+            {/* <div>
             <a href="https://www.facebook.com/" className="me-4 text-reset">
                 <MDBIcon fab icon="facebook-f" />
             </a>
@@ -35,7 +35,7 @@ function Footer() {
             <a href="https://www.github.com/" className="me-4 text-reset">
                 <MDBIcon fab icon="github" />
             </a>
-            </div>
+            </div> */}
         </section>
 
         <section className="">
