@@ -12,7 +12,7 @@ function CheckoutForm() {
   });
   const navigate = useNavigate();
   const context = useContext(cartCtx);
-  const { cart, getItemPrice } = context;
+  const { cart, getItemPrice, emptyCart } = context;
 
   function handleCheckout(event) {
     event.preventDefault();
@@ -25,6 +25,7 @@ function CheckoutForm() {
     createBuyOrder(orderData).then((orderId) => {
       navigate(`/checkout/${orderId}`);
     });
+    emptyCart();
   }
 
   function inputChangeHandler(event) {
