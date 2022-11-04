@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Checkout() {
   return (
@@ -8,4 +8,4 @@ function Checkout() {
   )
 }
 
-export default Checkout
+export default Checkout;
